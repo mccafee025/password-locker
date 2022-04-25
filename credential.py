@@ -21,7 +21,6 @@ class Credential:
     user_credentials_list = []
 
     @classmethod
-
     def check_user(cls,first_name,password):
         current_user = ''
         for user in User.users_list:
@@ -38,3 +37,10 @@ class Credential:
     def generate_password(size=8, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
         gen_pass=''.join(random.choice(char) for _ in range(size))
         return gen_pass
+    @classmethod 
+    def display_credentials(cls,user_name):
+        user_credentials_list = []
+        for credential in cls.credentials_list:
+            if credential.user_name == user_name:
+                user_credentials_list.append(credential)
+        return user_credentials_list
