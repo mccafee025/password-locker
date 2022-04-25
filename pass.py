@@ -20,5 +20,7 @@ def save_credential(credential):
     Credential.save_credentials(credential)
 def display_credentials(user_name):
     return Credential.display_credentials(user_name)
+def copy_credential(site_name):
+    return Credential.copy_credential(site_name)
 
 
