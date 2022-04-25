@@ -11,3 +11,8 @@ class User:
 		self.password = password
 	def save_user(self):
 		User.users_list.append(self)
+
+class Credential:
+	credentials_list =[]
+	user_credentials_list = []
+	@classmethod
